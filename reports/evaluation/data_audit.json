@@ -1,0 +1,67 @@
+{
+  "rows": 64000,
+  "normalisation": {
+    "zip_code": "Surburban -> Suburban; source spelling corrected without changing grouping"
+  },
+  "sha256": "bab6578f60db5d792f1c2372c502f029152a5249cf5ea84390f3b7f885d7234f",
+  "missing_cells": 0,
+  "exact_duplicate_rows": 6562,
+  "duplicate_rule": "Retain: matching rows are not known duplicate customers without identifiers.",
+  "arm_counts": {
+    "Mens E-Mail": 21307,
+    "No E-Mail": 21306,
+    "Womens E-Mail": 21387
+  },
+  "srm_p_value": 0.9036929575604196,
+  "retained_rows": 42613,
+  "train_rows": 21306,
+  "test_rows": 21307,
+  "split_disjoint": true,
+  "two_arm_srm_p_value": 0.9961348415003554,
+  "training_balance": [
+    {
+      "feature": "recency",
+      "smd": -0.010009469922220465
+    },
+    {
+      "feature": "history",
+      "smd": 0.013106786162653844
+    },
+    {
+      "feature": "mens",
+      "smd": -0.011332758864963438
+    },
+    {
+      "feature": "womens",
+      "smd": 0.022818992165277423
+    },
+    {
+      "feature": "newbie",
+      "smd": 0.018022978049537737
+    },
+    {
+      "feature": "zip_code_Rural",
+      "smd": 0.0047111929744167915
+    },
+    {
+      "feature": "zip_code_Suburban",
+      "smd": -0.010566257281118013
+    },
+    {
+      "feature": "zip_code_Urban",
+      "smd": 0.0072856112631589556
+    },
+    {
+      "feature": "channel_Multichannel",
+      "smd": -0.004005510181359518
+    },
+    {
+      "feature": "channel_Phone",
+      "smd": -0.006246287388924873
+    },
+    {
+      "feature": "channel_Web",
+      "smd": 0.008885252080472432
+    }
+  ]
+}

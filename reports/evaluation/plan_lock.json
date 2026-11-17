@@ -1,0 +1,26 @@
+{
+  "plan_sha256": "7d402837dea55f3094ecdfb009f2493d4662459a81427678981b52d1b95c3b68",
+  "code_sha256": {
+    "metrics.py": "365936a57f46fadc308eafb276aa0af6fd1dd9e875f58c723dfd32c6170e1640",
+    "models.py": "d804e3eac283a157da5da63952d4e9c9132bf8476f0abca63534d93b31429e73",
+    "__init__.py": "3d1613b8203ce187cebad624bdb8984216c639e769d291442243b397480dd503",
+    "pipeline.py": "376003c031cc44f9855a0d616e942d6706183e9dea4f9be4fbcf23a5570fd570",
+    "data.py": "7a7b763018a8647cea2e05a6bf3c37c8e22f33bb1bcdb0e923a64d24bb8387b4"
+  },
+  "data_sha256": "bab6578f60db5d792f1c2372c502f029152a5249cf5ea84390f3b7f885d7234f",
+  "seed": 20261115,
+  "train_ids_sha256": "3ca0156e3f76dddd4d391d0eade2afaf0c18f136899c9706160ddd864265e280",
+  "test_ids_sha256": "ba52d4459ae646c18ac31738b25f9c7db2d5a80a5e28c2104ea251d1f4b154e9",
+  "created_before_fit": true,
+  "power": {
+    "training_arm_rates": {
+      "0": 0.10701210926499577,
+      "1": 0.18332863981976907
+    },
+    "approximate_mdd_per_1000": 7.16501822707604,
+    "method": "Approximate HT contrast variance under near-uniform outcome rates across targeting groups; not exact AIPW power",
+    "alpha": 0.05,
+    "power": 0.8
+  },
+  "python": "3.11.5"
+}
