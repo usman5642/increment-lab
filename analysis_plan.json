@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "seed": 20261115,
+  "status": "locked before any model fitting",
+  "design": "50/50 assignment-stratified historical random holdout; no model selection",
+  "primary_learner": "T-logistic",
+  "primary_outcome": "visit",
+  "primary_capacity": 0.4,
+  "primary_contrast": "AIPW incremental visits per 1000 eligible customers: T-logistic top 40% minus expected random 40%",
+  "propensity": 0.5,
+  "secondary_models": [
+    "T-gradient",
+    "S-gradient"
+  ],
+  "secondary_comparators": [
+    "Response ranking",
+    "Heuristic",
+    "Contact all",
+    "Contact none"
+  ],
+  "secondary_outcomes": [
+    "conversion",
+    "spend"
+  ],
+  "features": [
+    "recency",
+    "history",
+    "mens",
+    "womens",
+    "zip_code",
+    "newbie",
+    "channel"
+  ],
+  "boosting": {
+    "max_iter": 120,
+    "max_leaf_nodes": 7,
+    "learning_rate": 0.05,
+    "min_samples_leaf": 150,
+    "l2_regularization": 5
+  },
+  "logistic": {
+    "C": 1,
+    "max_iter": 2000
+  },
+  "uncertainty": "2000 arm-stratified paired bootstrap replicates; reapply top-capacity rule; conditional on trained models; no training uncertainty",
+  "test_reuse": "No tuning or selection. Exact reproduction permitted to separate output folder with same plan/data/code hashes.",
+  "power": "Approximate HT policy-minus-random MDD using training arm rates and q(1-q), alpha=.05 power=.8; not exact AIPW power",
+  "contact_rounding": "floor(n*q+.5)",
+  "licence": "Unspecified; source downloader only, no public raw data",
+  "review_decision": "50/50 fallback chosen over cross-fitting to retain an independent confirmatory evaluation."
+}

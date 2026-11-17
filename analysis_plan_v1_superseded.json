@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "written_before_model_fitting": true,
+  "seed": 20261115,
+  "dataset": "Hillstrom 2008 email experiment, 64000 rows",
+  "treatment": "Mens E-Mail",
+  "control": "No E-Mail",
+  "excluded_arm": "Womens E-Mail",
+  "estimand": "Incremental probability of a visit within two weeks from assignment to Mens E-Mail versus No E-Mail, in the retained historical experiment population",
+  "primary_outcome": "visit",
+  "secondary_outcomes": [
+    "conversion",
+    "spend"
+  ],
+  "features": [
+    "recency",
+    "history",
+    "mens",
+    "womens",
+    "zip_code",
+    "newbie",
+    "channel"
+  ],
+  "excluded_features": {
+    "history_segment": "Redundant banding of included historical spend",
+    "segment": "Treatment assignment, not a pre-treatment predictor",
+    "visit": "Post-treatment outcome",
+    "conversion": "Post-treatment outcome",
+    "spend": "Post-treatment outcome"
+  },
+  "split": "60% training, 20% validation, 20% test; fixed random seed, stratified by assignment only, never by outcomes",
+  "propensity": 0.5,
+  "primary_capacity": 0.4,
+  "model_selection": "Largest validation Horvitz-Thompson policy gain at 40% capacity among three pre-specified uplift candidates; ties use listed model order",
+  "candidates": [
+    "T-logistic",
+    "S-gradient",
+    "T-gradient"
+  ],
+  "baselines": [
+    "Response ranking from training treated-arm logistic regression",
+    "Expected random targeting at the same capacity",
+    "Email everyone",
+    "Email nobody"
+  ],
+  "model_settings": {
+    "logistic_C": 1.0,
+    "logistic_max_iter": 2000,
+    "gradient_max_iter": 120,
+    "gradient_max_leaf_nodes": 7,
+    "gradient_learning_rate": 0.05,
+    "gradient_min_samples_leaf": 150,
+    "gradient_l2_regularization": 5.0,
+    "gradient_early_stopping": false
+  },
+  "test_protocol": "Freeze validation winner; do not refit or tune on test. Rank all eligible test records without consulting their assignment or outcomes. 40% is confirmatory; other displayed capacities are exploratory.",
+  "uncertainty": "2000 paired nonparametric bootstrap draws over test records, fixed fitted scores and selection masks; intervals exclude training/model-selection uncertainty and are pointwise, not simultaneous",
+  "secondary_protocol": "Evaluate conversion and spend under the visit-selected policy; no secondary model fitting or selection; exploratory only",
+  "claims": "Offline evaluation only. No realised revenue, deployed campaign savings, individual causal labels, or guarantee of future performance."
+}

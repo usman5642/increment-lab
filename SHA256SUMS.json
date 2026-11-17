@@ -1,0 +1,23 @@
+{
+  ".gitignore": "201ef59cc9d3222f8707b96171f814f12921512b6b7d16a94eb97f294c0e6a42",
+  "README.md": "92ffbbe6a06aaa3575cc24e45d7323355913a441dc23878d29cff9520067c861",
+  "VALIDATION.md": "3c45b688838f88d25a1fd44a6e6af99f53a9a06ec539a3e89948fc9b3ff91820",
+  "analysis_plan.json": "7d402837dea55f3094ecdfb009f2493d4662459a81427678981b52d1b95c3b68",
+  "analysis_plan_v1_superseded.json": "99c0198bd7bba0889917281c94eb05e8d9bffd24fdeed5f8b09f667c3c4d6b51",
+  "data/README.md": "9933c944e53374d9f44d6a5b7469b391c2ec41df33ead9b72b7399a00d20eca3",
+  "evidence/uplift-evidence.png": "fb3b209e962045a6046980cb1950be085dbe9f8faecb16754b39e5d5c4e1d99e",
+  "pyproject.toml": "c64315305dd6eaee6547d6d722cea23fd002545d107d0f0f0fa6ddd2ea0f46f1",
+  "reports/evaluation/completion.json": "36fb2f6ab062eada664f55accd47beef3971fbda7ebc42008ce9d1190d94bf25",
+  "reports/evaluation/data_audit.json": "4750e934d219c4ad4aee84290ece4799b77acccc86550388fbb26d3607903f2d",
+  "reports/evaluation/evaluation_started.json": "f4e3f28f314a0ae50ed6b87e9018d993d6a43de08766cfb1923970ef608a9904",
+  "reports/evaluation/plan_lock.json": "1524b796c3cfbc75ad4265b54606557a1705d0f6434eaaf5747a9e9845b47091",
+  "reports/evaluation/policy_results.csv": "84d58c9629807c6005570949ec07246afa50f46df06ea0fb10f6fc9f97cb5939",
+  "reports/evaluation/results.json": "1115a5465fbc3b88d08f860f79b94ac7737d7a09c8d0ae40a6468082c7ed05e6",
+  "run.py": "50edde68f85ab4358e4ae12745fe1ab136f5a3fcf1c515d1857cde84ffd2e9d7",
+  "src/uplift_lab/__init__.py": "3d1613b8203ce187cebad624bdb8984216c639e769d291442243b397480dd503",
+  "src/uplift_lab/data.py": "26e19e8e1494aaa24c29d90ad1767caa60c553db98ecb0cf0b1a79dc52f6b1aa",
+  "src/uplift_lab/metrics.py": "b521673dbeec8355eef4ad83bb413b14ae13895bac55d525d716225932034791",
+  "src/uplift_lab/models.py": "a044dea5462da0f0dba02d64078aa53dcce75e11ad08efadef1b18a5b78b457a",
+  "src/uplift_lab/pipeline.py": "7e73ba6ff30e1c4a6b38401487eef6b4b3aa500eac1438f9020640d648114d76",
+  "tests/test_policy.py": "e8f2acad444d000428e31a20cfccb94b35cef5efbf8cb65ff6db4d381bcdd511"
+}
